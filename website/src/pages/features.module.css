@@ -1,0 +1,84 @@
+.page {
+  padding-bottom: 4rem;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid rgba(71, 140, 191, 0.12);
+}
+
+.hero h1 {
+  font-family: var(--ifm-heading-font-family);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: var(--mnemonic-ink-muted, #9aabb8);
+  font-size: 1.1rem;
+}
+
+.section {
+  padding: 3rem 0 0;
+}
+
+.feature {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(71, 140, 191, 0.1);
+}
+
+@media (min-width: 768px) {
+  .feature {
+    grid-template-columns: 220px 1fr;
+    align-items: start;
+  }
+}
+
+.featureLabel {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.feature h2 {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature p,
+.feature li {
+  color: var(--mnemonic-ink-muted, #9aabb8);
+  line-height: 1.65;
+}
+
+.feature ul {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(71, 140, 191, 0.25);
+  color: var(--ifm-color-primary);
+}

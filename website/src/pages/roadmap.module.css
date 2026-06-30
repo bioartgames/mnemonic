@@ -1,0 +1,117 @@
+.page {
+  padding-bottom: 4rem;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid rgba(71, 140, 191, 0.12);
+}
+
+.hero h1 {
+  font-family: var(--ifm-heading-font-family);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: var(--mnemonic-ink-muted, #9aabb8);
+}
+
+.phase {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(71, 140, 191, 0.14);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+}
+
+.phaseHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.phaseHeader h2 {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.status {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.statusDone {
+  background: rgba(71, 140, 191, 0.15);
+  color: var(--ifm-color-primary);
+}
+
+.statusActive {
+  background: rgba(196, 154, 108, 0.2);
+  color: var(--mnemonic-accent-warm, #c49a6c);
+}
+
+.statusPlanned {
+  background: rgba(176, 125, 138, 0.15);
+  color: var(--mnemonic-accent-rose, #b07d8a);
+}
+
+.phase p {
+  color: var(--mnemonic-ink-muted, #9aabb8);
+  margin-bottom: 1rem;
+}
+
+.itemList {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.itemList li {
+  margin-bottom: 0.35rem;
+  line-height: 1.55;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--mnemonic-ink-muted, #9aabb8);
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dotDone {
+  background: var(--ifm-color-primary);
+}
+
+.dotActive {
+  background: var(--mnemonic-accent-warm, #c49a6c);
+}
+
+.dotPlanned {
+  background: var(--mnemonic-accent-rose, #b07d8a);
+}

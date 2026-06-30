@@ -1,0 +1,14 @@
+# Dependencies
+/node_modules
+
+# Production
+/build
+.docusaurus
+
+# Misc
+.DS_Store
+.env
+.env.local
+
+# Debug
+npm-debug.log*
