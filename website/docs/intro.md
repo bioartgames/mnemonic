@@ -15,17 +15,17 @@ Mnemonic splits responsibilities between the editor and a capture host:
 
 | Component | Role |
 |-----------|------|
-| **Mnemonic Hook** | Godot editor addon (`addons/mnemonic_hook/`). Emits session events, provides the dock UI, and communicates with Core over local IPC. |
+| **Mnemonic** | Godot editor addon (`addons/mnemonic/`). Emits session events, provides the dock UI, and communicates with Core over local IPC. |
 | **Mnemonic Core** | Windows tray host (`Mnemonic.Windows.exe`). Captures screen and audio, closes segments, scores heuristics, writes clips, and polls git. |
 
-The Hook never runs FFmpeg or encodes video directly. Core owns capture, retention, and the local archive.
+The editor addon never runs FFmpeg or encodes video directly. Core owns capture, retention, and the local archive.
 
 ## What you get
 
 - **Video clips** of meaningful development windows
 - **Structured metadata** — score, tags, active scenes, git branch and commit
 - **Segment history** — a log of every closed segment, kept or discarded
-- **A browsable archive** in the Hook dock with search, filters, and playback
+- **A browsable archive** in the Mnemonic dock with search, filters, and playback
 
 ## Who is it for?
 
@@ -40,7 +40,7 @@ Mnemonic is for Godot developers who:
 
 - [Install Mnemonic](./installation.md)
 - [Understand development episodes](./concepts/development-episodes.md)
-- [Hook dock guide](./guide/hook-dock.md)
+- [Mnemonic dock guide](./guide/mnemonic-dock.md)
 - [FAQ](./faq.md)
 - [Explore features](/features)
 - [Read the roadmap](/roadmap)

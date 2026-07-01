@@ -64,7 +64,7 @@ function HomeHero() {
             />
             <img
               src={heroPoster}
-              alt="Mnemonic Hook dock in Godot during recording, showing LIVE timer and preserved clips with git commit subjects"
+              alt="Mnemonic dock in Godot during recording, showing LIVE timer and preserved clips with git commit subjects"
               className={styles.heroArt}
             />
           </picture>

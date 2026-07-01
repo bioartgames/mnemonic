@@ -1,12 +1,12 @@
 class_name HookSettingsHeuristicsSection
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookSettingsIoGd = preload("res://addons/mnemonic_hook/ipc/hook_settings_io.gd")
-const HookHeuristicCatalogGd = preload("res://addons/mnemonic_hook/heuristic/hook_heuristic_catalog.gd")
-const HookHeuristicRowGd = preload("res://addons/mnemonic_hook/ui/hook_heuristic_row.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookSettingsIoGd = preload("res://addons/mnemonic/ipc/hook_settings_io.gd")
+const HookHeuristicCatalogGd = preload("res://addons/mnemonic/heuristic/hook_heuristic_catalog.gd")
+const HookHeuristicRowGd = preload("res://addons/mnemonic/ui/hook_heuristic_row.gd")
 const HookSignalsTableLayoutGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_signals_table_layout.gd"
+	"res://addons/mnemonic/ui/hook_signals_table_layout.gd"
 )
 
 const _SIGNAL_CATEGORY_LABELS := {

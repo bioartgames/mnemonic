@@ -1,8 +1,8 @@
 class_name HookRuntimeErrorDebuggerPlugin
 extends EditorDebuggerPlugin
 
-const HookRuntimeErrorTrackerGd = preload("res://addons/mnemonic_hook/errors/hook_runtime_error_tracker.gd")
-const HookDebugSessionTrackerGd = preload("res://addons/mnemonic_hook/errors/hook_debug_session_tracker.gd")
+const HookRuntimeErrorTrackerGd = preload("res://addons/mnemonic/errors/hook_runtime_error_tracker.gd")
+const HookDebugSessionTrackerGd = preload("res://addons/mnemonic/errors/hook_debug_session_tracker.gd")
 
 var _tracker: HookRuntimeErrorTracker
 var _debug_session

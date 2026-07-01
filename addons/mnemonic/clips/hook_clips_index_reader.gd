@@ -1,8 +1,8 @@
 class_name HookClipsIndexReader
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookControlJsonReaderGd = preload("res://addons/mnemonic_hook/ipc/hook_control_json_reader.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookControlJsonReaderGd = preload("res://addons/mnemonic/ipc/hook_control_json_reader.gd")
 
 
 static func read(paths: MnemonicDataRootPaths) -> Dictionary:

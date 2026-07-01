@@ -1,8 +1,8 @@
 class_name HookSignificanceTier
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookDockThemeGd = preload("res://addons/mnemonic_hook/ui/hook_dock_theme.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookDockThemeGd = preload("res://addons/mnemonic/ui/hook_dock_theme.gd")
 
 
 static func resolve_notable_score_min(

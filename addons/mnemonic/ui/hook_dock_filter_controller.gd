@@ -1,13 +1,13 @@
 class_name HookDockFilterController
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 const HookClipFilterCriteriaGd = preload(
-	"res://addons/mnemonic_hook/clips/hook_clip_filter_criteria.gd"
+	"res://addons/mnemonic/clips/hook_clip_filter_criteria.gd"
 )
-const HookDockToolbarStyleGd = preload("res://addons/mnemonic_hook/ui/hook_dock_toolbar_style.gd")
-const HookDockHostGd = preload("res://addons/mnemonic_hook/ui/hook_dock_host.gd")
-const HookDockFilterPanelGd = preload("res://addons/mnemonic_hook/ui/hook_dock_filter_panel.gd")
+const HookDockToolbarStyleGd = preload("res://addons/mnemonic/ui/hook_dock_toolbar_style.gd")
+const HookDockHostGd = preload("res://addons/mnemonic/ui/hook_dock_host.gd")
+const HookDockFilterPanelGd = preload("res://addons/mnemonic/ui/hook_dock_filter_panel.gd")
 
 var host
 var panel

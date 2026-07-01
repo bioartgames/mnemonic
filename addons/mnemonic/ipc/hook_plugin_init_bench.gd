@@ -1,15 +1,15 @@
 class_name HookPluginInitBench
 extends RefCounted
 
-const DataRootPathsGd = preload("res://addons/mnemonic_hook/ipc/data_root_paths.gd")
-const HookGitPollGd = preload("res://addons/mnemonic_hook/git/hook_git_poll.gd")
-const HookCoreRunningCacheGd = preload("res://addons/mnemonic_hook/ipc/hook_core_running_cache.gd")
-const HookCoreProcessProbeGd = preload("res://addons/mnemonic_hook/ipc/hook_core_process_probe.gd")
-const HookLifecyclePollerGd = preload("res://addons/mnemonic_hook/ipc/hook_lifecycle_poller.gd")
-const HookStatusReaderGd = preload("res://addons/mnemonic_hook/ipc/hook_status_reader.gd")
-const HookClipsIndexGd = preload("res://addons/mnemonic_hook/clips/hook_clips_index.gd")
-const HookClipThumbnailGd = preload("res://addons/mnemonic_hook/clips/hook_clip_thumbnail.gd")
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const DataRootPathsGd = preload("res://addons/mnemonic/ipc/data_root_paths.gd")
+const HookGitPollGd = preload("res://addons/mnemonic/git/hook_git_poll.gd")
+const HookCoreRunningCacheGd = preload("res://addons/mnemonic/ipc/hook_core_running_cache.gd")
+const HookCoreProcessProbeGd = preload("res://addons/mnemonic/ipc/hook_core_process_probe.gd")
+const HookLifecyclePollerGd = preload("res://addons/mnemonic/ipc/hook_lifecycle_poller.gd")
+const HookStatusReaderGd = preload("res://addons/mnemonic/ipc/hook_status_reader.gd")
+const HookClipsIndexGd = preload("res://addons/mnemonic/clips/hook_clips_index.gd")
+const HookClipThumbnailGd = preload("res://addons/mnemonic/clips/hook_clip_thumbnail.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 
 static func measure_ms(callable: Callable) -> int:
@@ -55,7 +55,7 @@ static func _write_tiny_thumb(thumb_abs: String) -> void:
 static func run_phases(clip_count: int = 50) -> Dictionary:
 	var results: Dictionary = {}
 	var temp_root := OS.get_cache_dir().path_join(
-		"mnemonic_hook_init_bench_%d" % Time.get_ticks_msec()
+		"mnemonic_init_bench_%d" % Time.get_ticks_msec()
 	)
 	DirAccess.make_dir_recursive_absolute(temp_root)
 	var paths := DataRootPathsGd.new(temp_root)

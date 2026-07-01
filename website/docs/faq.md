@@ -12,7 +12,7 @@ Mnemonic is a Godot development memory system. It automatically captures time-bo
 
 ## Which platforms are supported?
 
-Today Mnemonic targets Windows with Godot 4.6+. The release zip includes a bundled, self-contained Core tray host — no .NET SDK required. The Hook addon runs inside the Godot editor. macOS and Linux support may follow as the capture stack matures.
+Today Mnemonic targets Windows with Godot 4.6+. The release zip includes a bundled, self-contained Core tray host — no .NET SDK required. The Mnemonic editor addon runs inside the Godot editor. macOS and Linux support may follow as the capture stack matures.
 
 ## Does Mnemonic upload my footage to the cloud?
 
@@ -28,7 +28,7 @@ They remain in scratch storage and are eventually overwritten. Every segment clo
 
 ## Can I force-save the current segment?
 
-Yes, when the dock allows it. Use **Save segment** in the Hook dock or double-click the LIVE row when the current score is below the preserve threshold. The dock blocks **Save segment** when the score already meets the threshold (auto-save would apply). You can still request manual preserve via the Core flag file for automation.
+Yes, when the dock allows it. Use **Save segment** in the Mnemonic dock or double-click the LIVE row when the current score is below the preserve threshold. The dock blocks **Save segment** when the score already meets the threshold (auto-save would apply). You can still request manual preserve via the Core flag file for automation.
 
 ## Do I need to commit to git for Mnemonic to work?
 
@@ -36,7 +36,7 @@ No, but git integration enriches clips significantly. Without a repository, clip
 
 ## Will Mnemonic slow down my Godot editor?
 
-Hook is designed to defer heavy work until after editor startup. Event emission is lightweight JSONL append; capture and encoding happen in the separate Core process.
+Mnemonic is designed to defer heavy work until after editor startup. Event emission is lightweight JSONL append; capture and encoding happen in the separate Core process.
 
 ## What are heuristics?
 
@@ -44,7 +44,7 @@ Heuristics are significance signals — playtest starts, scene saves, runtime er
 
 ## Where can I see the full feature list?
 
-The [Features](/features) page walks through capture, git linkage, narrative reconstruction, and the Hook dock in detail.
+The [Features](/features) page walks through capture, git linkage, narrative reconstruction, and the Mnemonic dock in detail.
 
 ## What is on the roadmap?
 
@@ -52,4 +52,4 @@ See the [Roadmap](/roadmap) page for planned phases and what is shipping today.
 
 ## Is Mnemonic open source?
 
-The project lives on [GitHub](https://github.com/bioartgames/mnemonic-hook). Check the repository for the current license and contribution guidelines.
+The project lives on [GitHub](https://github.com/bioartgames/mnemonic). Check the repository for the current license and contribution guidelines.

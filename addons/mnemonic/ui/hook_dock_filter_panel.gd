@@ -1,9 +1,9 @@
 class_name HookDockFilterPanel
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookDatePickerGd = preload("res://addons/mnemonic_hook/ui/hook_date_picker.gd")
-const HookDockVerticalLayoutGd = preload("res://addons/mnemonic_hook/ui/hook_dock_vertical_layout.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookDatePickerGd = preload("res://addons/mnemonic/ui/hook_date_picker.gd")
+const HookDockVerticalLayoutGd = preload("res://addons/mnemonic/ui/hook_dock_vertical_layout.gd")
 
 var filter_row: HBoxContainer
 var btn_toggle: Button

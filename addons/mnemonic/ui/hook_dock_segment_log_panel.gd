@@ -1,21 +1,21 @@
 class_name HookDockSegmentLogPanel
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const SegmentHistoryIoGd = preload("res://addons/mnemonic_hook/ipc/segment_history_io.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const SegmentHistoryIoGd = preload("res://addons/mnemonic/ipc/segment_history_io.gd")
 const HookDockVerticalLayoutGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_vertical_layout.gd"
+	"res://addons/mnemonic/ui/hook_dock_vertical_layout.gd"
 )
-const HookDockEmptyStateGd = preload("res://addons/mnemonic_hook/ui/hook_dock_empty_state.gd")
-const HookDockToolbarStyleGd = preload("res://addons/mnemonic_hook/ui/hook_dock_toolbar_style.gd")
+const HookDockEmptyStateGd = preload("res://addons/mnemonic/ui/hook_dock_empty_state.gd")
+const HookDockToolbarStyleGd = preload("res://addons/mnemonic/ui/hook_dock_toolbar_style.gd")
 const HookDockSegmentLogReloadGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_segment_log_reload.gd"
+	"res://addons/mnemonic/ui/hook_dock_segment_log_reload.gd"
 )
 const HookDockSegmentLogContextGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_segment_log_context.gd"
+	"res://addons/mnemonic/ui/hook_dock_segment_log_context.gd"
 )
-const HookDockHostGd = preload("res://addons/mnemonic_hook/ui/hook_dock_host.gd")
-const HookDockClipsDrawerGd = preload("res://addons/mnemonic_hook/ui/hook_dock_clips_drawer.gd")
+const HookDockHostGd = preload("res://addons/mnemonic/ui/hook_dock_host.gd")
+const HookDockClipsDrawerGd = preload("res://addons/mnemonic/ui/hook_dock_clips_drawer.gd")
 
 var host
 var toggle_btn: Button

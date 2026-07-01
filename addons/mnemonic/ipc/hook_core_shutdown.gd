@@ -1,10 +1,10 @@
 class_name HookCoreShutdown
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookCoreProcessProbeGd = preload("res://addons/mnemonic_hook/ipc/hook_core_process_probe.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookCoreProcessProbeGd = preload("res://addons/mnemonic/ipc/hook_core_process_probe.gd")
 const HookCaptureCommandWriterGd = preload(
-	"res://addons/mnemonic_hook/commands/hook_capture_command_writer.gd"
+	"res://addons/mnemonic/commands/hook_capture_command_writer.gd"
 )
 
 
@@ -14,7 +14,7 @@ static func request_graceful_shutdown(paths: MnemonicDataRootPaths) -> bool:
 	if not HookCoreProcessProbeGd.is_running():
 		return true
 	if not HookCaptureCommandWriterGd.write_exit_core(paths):
-		push_warning("Mnemonic Hook: could not write exit_core command.")
+		push_warning("Mnemonic: could not write exit_core command.")
 		return false
 
 	var deadline_ms := Time.get_ticks_msec() + int(Mc.CORE_SHUTDOWN_WAIT_SEC * 1000.0)
@@ -24,7 +24,7 @@ static func request_graceful_shutdown(paths: MnemonicDataRootPaths) -> bool:
 		OS.delay_msec(int(Mc.CORE_SHUTDOWN_POLL_SEC * 1000.0))
 
 	push_warning(
-		"Mnemonic Hook: Core did not exit within %ss after shutdown command."
+		"Mnemonic: Core did not exit within %ss after shutdown command."
 		% Mc.CORE_SHUTDOWN_WAIT_SEC
 	)
 	return false

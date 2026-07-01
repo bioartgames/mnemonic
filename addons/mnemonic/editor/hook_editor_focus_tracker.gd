@@ -1,10 +1,10 @@
 class_name HookEditorFocusTracker
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const SessionEventJsonGd = preload("res://addons/mnemonic_hook/events/session_event_json.gd")
-const JsonlEventAppenderGd = preload("res://addons/mnemonic_hook/events/jsonl_event_appender.gd")
-const HookSceneTrackerGd = preload("res://addons/mnemonic_hook/trackers/hook_scene_tracker.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const SessionEventJsonGd = preload("res://addons/mnemonic/events/session_event_json.gd")
+const JsonlEventAppenderGd = preload("res://addons/mnemonic/events/jsonl_event_appender.gd")
+const HookSceneTrackerGd = preload("res://addons/mnemonic/trackers/hook_scene_tracker.gd")
 
 const VALID_FOCUS_BUCKETS := ["script", "2d", "3d", "inspector", "other"]
 

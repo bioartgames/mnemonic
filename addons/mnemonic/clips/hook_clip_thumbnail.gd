@@ -1,7 +1,7 @@
 class_name HookClipThumbnail
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 const PLACEHOLDER_MODULATE := Color(0.25, 0.25, 0.28, 1.0)
 

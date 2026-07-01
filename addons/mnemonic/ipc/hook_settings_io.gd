@@ -1,8 +1,8 @@
 class_name HookSettingsIo
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookFileMutexGd = preload("res://addons/mnemonic_hook/ipc/hook_file_mutex.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookFileMutexGd = preload("res://addons/mnemonic/ipc/hook_file_mutex.gd")
 
 
 static func read_settings(paths: MnemonicDataRootPaths) -> Dictionary:

@@ -1,10 +1,10 @@
 class_name HookLifecyclePoller
 extends RefCounted
 
-const HookCoreRunningCacheGd = preload("res://addons/mnemonic_hook/ipc/hook_core_running_cache.gd")
-const HookLifecycleStateGd = preload("res://addons/mnemonic_hook/ipc/hook_lifecycle_state.gd")
-const HookStatusReaderGd = preload("res://addons/mnemonic_hook/ipc/hook_status_reader.gd")
-const HookStatusReadResultGd = preload("res://addons/mnemonic_hook/ipc/hook_status_read_result.gd")
+const HookCoreRunningCacheGd = preload("res://addons/mnemonic/ipc/hook_core_running_cache.gd")
+const HookLifecycleStateGd = preload("res://addons/mnemonic/ipc/hook_lifecycle_state.gd")
+const HookStatusReaderGd = preload("res://addons/mnemonic/ipc/hook_status_reader.gd")
+const HookStatusReadResultGd = preload("res://addons/mnemonic/ipc/hook_status_read_result.gd")
 
 var _reader: HookStatusReader
 var _last: HookLifecycleState = HookLifecycleStateGd.new()
@@ -25,14 +25,14 @@ func poll(force_refresh: bool = false) -> void:
 	if not _last.core_running:
 		if not _not_running_warned:
 			if _verbose_logging:
-				push_warning("Mnemonic Hook: Mnemonic Core is not running.")
+				push_warning("Mnemonic: Mnemonic Core is not running.")
 			_not_running_warned = true
 		_missing_status_warned = false
 	elif _last.status.code == HookStatusReadResult.Code.MISSING_FILE:
 		_not_running_warned = false
 		if not _missing_status_warned:
 			if _verbose_logging:
-				push_warning("Mnemonic Hook: Core running but status.json missing.")
+				push_warning("Mnemonic: Core running but status.json missing.")
 			_missing_status_warned = true
 	else:
 		_not_running_warned = false

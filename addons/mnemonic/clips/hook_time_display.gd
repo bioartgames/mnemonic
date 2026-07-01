@@ -1,7 +1,7 @@
 class_name HookTimeDisplay
 extends RefCounted
 
-const HookCalendarLabelsGd = preload("res://addons/mnemonic_hook/clips/hook_calendar_labels.gd")
+const HookCalendarLabelsGd = preload("res://addons/mnemonic/clips/hook_calendar_labels.gd")
 
 
 static func format_clock_12h(hour: int, minute: int) -> String:

@@ -1,7 +1,7 @@
 class_name HookLiveScratchReveal
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 
 static func resolve(scratch_dir: String, segment_index: int, capture_prefix: String) -> Dictionary:

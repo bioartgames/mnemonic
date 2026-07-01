@@ -1,14 +1,14 @@
 class_name EditorHookSettingsPanel
 extends PopupPanel
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookSettingsIoGd = preload("res://addons/mnemonic_hook/ipc/hook_settings_io.gd")
-const SegmentHistoryIoGd = preload("res://addons/mnemonic_hook/ipc/segment_history_io.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookSettingsIoGd = preload("res://addons/mnemonic/ipc/hook_settings_io.gd")
+const SegmentHistoryIoGd = preload("res://addons/mnemonic/ipc/segment_history_io.gd")
 const HookSettingsRetentionSectionGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_settings_retention_section.gd"
+	"res://addons/mnemonic/ui/hook_settings_retention_section.gd"
 )
 const HookSettingsHeuristicsSectionGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_settings_heuristics_section.gd"
+	"res://addons/mnemonic/ui/hook_settings_heuristics_section.gd"
 )
 
 signal settings_toast(message: String)

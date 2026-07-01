@@ -1,8 +1,8 @@
 class_name HookDockClipListReload
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookClipsSourceGd = preload("res://addons/mnemonic_hook/clips/hook_clips_source.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookClipsSourceGd = preload("res://addons/mnemonic/clips/hook_clips_source.gd")
 
 
 static func execute(ctx: HookDockClipListContext, mode: int) -> void:

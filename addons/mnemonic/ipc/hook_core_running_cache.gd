@@ -1,8 +1,8 @@
 class_name HookCoreRunningCache
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookCoreProcessProbeGd = preload("res://addons/mnemonic_hook/ipc/hook_core_process_probe.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookCoreProcessProbeGd = preload("res://addons/mnemonic/ipc/hook_core_process_probe.gd")
 
 static var _cached := false
 static var _expires_ms := 0

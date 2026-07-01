@@ -1,13 +1,13 @@
 class_name SegmentHistoryIo
 extends RefCounted
 
-const HookSignificanceTierGd = preload("res://addons/mnemonic_hook/clips/hook_significance_tier.gd")
-const HookTimeDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_time_display.gd")
+const HookSignificanceTierGd = preload("res://addons/mnemonic/clips/hook_significance_tier.gd")
+const HookTimeDisplayGd = preload("res://addons/mnemonic/clips/hook_time_display.gd")
 
 ## Keep trim logic in sync with mnemonic-core SegmentHistoryStore.TrimToMax.
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookFileMutexGd = preload("res://addons/mnemonic_hook/ipc/hook_file_mutex.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookFileMutexGd = preload("res://addons/mnemonic/ipc/hook_file_mutex.gd")
 
 
 static func _parse_record_entries(text: String, as_lines: bool) -> Array:

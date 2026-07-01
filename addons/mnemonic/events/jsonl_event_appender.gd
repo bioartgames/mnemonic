@@ -1,8 +1,8 @@
 class_name JsonlEventAppender
 extends RefCounted
 
-const SessionEventJsonGd = preload("res://addons/mnemonic_hook/events/session_event_json.gd")
-const HookFileMutexGd = preload("res://addons/mnemonic_hook/ipc/hook_file_mutex.gd")
+const SessionEventJsonGd = preload("res://addons/mnemonic/events/session_event_json.gd")
+const HookFileMutexGd = preload("res://addons/mnemonic/ipc/hook_file_mutex.gd")
 
 
 static func append(path: String, event: Dictionary) -> void:

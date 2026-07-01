@@ -2,7 +2,7 @@ class_name HookDockToolbarStyle
 extends RefCounted
 
 const HookDockVerticalLayoutGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_vertical_layout.gd"
+	"res://addons/mnemonic/ui/hook_dock_vertical_layout.gd"
 )
 
 

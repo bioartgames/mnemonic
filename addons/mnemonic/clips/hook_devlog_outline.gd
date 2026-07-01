@@ -1,7 +1,7 @@
 class_name HookDevlogOutline
 extends RefCounted
 
-const HookTimeDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_time_display.gd")
+const HookTimeDisplayGd = preload("res://addons/mnemonic/clips/hook_time_display.gd")
 
 
 static func format_group(group: Dictionary) -> String:

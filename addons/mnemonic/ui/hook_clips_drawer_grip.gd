@@ -1,7 +1,7 @@
 @tool
 extends Control
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 var _dock_theme = null
 

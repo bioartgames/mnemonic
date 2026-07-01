@@ -1,11 +1,11 @@
 class_name HookLiveRecIndicator
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookClipThumbnailGd = preload("res://addons/mnemonic_hook/clips/hook_clip_thumbnail.gd")
-const HookSignificanceTierGd = preload("res://addons/mnemonic_hook/clips/hook_significance_tier.gd")
-const HookDockThemeGd = preload("res://addons/mnemonic_hook/ui/hook_dock_theme.gd")
-const PulseShader = preload("res://addons/mnemonic_hook/ui/hook_live_save_pulse.gdshader")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookClipThumbnailGd = preload("res://addons/mnemonic/clips/hook_clip_thumbnail.gd")
+const HookSignificanceTierGd = preload("res://addons/mnemonic/clips/hook_significance_tier.gd")
+const HookDockThemeGd = preload("res://addons/mnemonic/ui/hook_dock_theme.gd")
+const PulseShader = preload("res://addons/mnemonic/ui/hook_live_save_pulse.gdshader")
 
 
 static func build(thumb_size: Vector2, theme: HookDockTheme) -> Dictionary:

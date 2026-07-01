@@ -64,9 +64,9 @@ const TOOLTIP_SEGMENT_HISTORY_MAX_ENTRIES := (
 const SETTINGS_KEY_HEURISTICS := "heuristics"
 const SETTINGS_KEY_START_RECORDING_ON_LAUNCH := "start_recording_on_launch"
 const SETTINGS_DEFAULT_START_RECORDING_ON_LAUNCH := true
-const EDITOR_SETTING_AUTO_LAUNCH_CORE := "mnemonic_hook/auto_launch_core"
-const EDITOR_SETTING_STOP_CORE_ON_EDITOR_EXIT := "mnemonic_hook/stop_core_on_editor_exit"
-const EDITOR_SETTING_VERBOSE_LOGGING := "mnemonic_hook/verbose_logging"
+const EDITOR_SETTING_AUTO_LAUNCH_CORE := "mnemonic/auto_launch_core"
+const EDITOR_SETTING_STOP_CORE_ON_EDITOR_EXIT := "mnemonic/stop_core_on_editor_exit"
+const EDITOR_SETTING_VERBOSE_LOGGING := "mnemonic/verbose_logging"
 const EDITOR_SETTING_DEFAULT_BOOL := false
 const EXIT_CORE_COMMAND_FILE_NAME := "exit_core.json"
 const CORE_SHUTDOWN_WAIT_SEC := 5.0
@@ -127,9 +127,9 @@ const LIVE_SAVE_FLAG_POLL_SEC := 0.2
 const LIVE_SAVE_FLAG_TIMEOUT_SEC := 150.0
 const TOOLTIP_STOP_RECORDING := "Stop recording and quit Mnemonic."
 const TOOLTIP_START_RECORDING := "Start recording. Launches Mnemonic if it is not running."
-const EDITOR_SETTING_CORE_WINDOWS_EXE := "mnemonic_hook/core_windows_exe"
-const EDITOR_SETTING_DOCK_CLIPS_SPLIT_OFFSET := "mnemonic_hook/dock_clips_split_offset"
-const LAYOUT_SECTION_HOOK := "mnemonic_hook"
+const EDITOR_SETTING_CORE_WINDOWS_EXE := "mnemonic/core_windows_exe"
+const EDITOR_SETTING_DOCK_CLIPS_SPLIT_OFFSET := "mnemonic/dock_clips_split_offset"
+const LAYOUT_SECTION_HOOK := "mnemonic"
 const LAYOUT_KEY_DOCK_SLOT := "dock_slot"
 const DEFAULT_DOCK_SLOT := 2
 const DOCK_SLOT_MIN := 0
@@ -153,7 +153,7 @@ const TOOLTIP_WORKFLOW_STOP_ON_EXIT := (
 	"Stop recording and quit Mnemonic when you close Godot."
 )
 const TOOLTIP_WORKFLOW_VERBOSE_LOGGING := (
-	"Show Hook startup and lifecycle diagnostics in the Output panel."
+	"Show Mnemonic startup and lifecycle diagnostics in the Output panel."
 )
 const MENU_WORKFLOW_SUBMENU := "Recording"
 const MENU_WORKFLOW_AUTO_START_ON_OPEN := "Start recording when Godot opens"

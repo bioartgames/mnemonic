@@ -1,13 +1,13 @@
 class_name HookDockLiveSessionController
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookSignificanceTierGd = preload("res://addons/mnemonic_hook/clips/hook_significance_tier.gd")
-const HookLiveRecIndicatorGd = preload("res://addons/mnemonic_hook/ui/hook_live_rec_indicator.gd")
-const HookLiveDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_live_display.gd")
-const HookDockHostGd = preload("res://addons/mnemonic_hook/ui/hook_dock_host.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookSignificanceTierGd = preload("res://addons/mnemonic/clips/hook_significance_tier.gd")
+const HookLiveRecIndicatorGd = preload("res://addons/mnemonic/ui/hook_live_rec_indicator.gd")
+const HookLiveDisplayGd = preload("res://addons/mnemonic/clips/hook_live_display.gd")
+const HookDockHostGd = preload("res://addons/mnemonic/ui/hook_dock_host.gd")
 const HookDockLiveSaveControllerGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_live_save_controller.gd"
+	"res://addons/mnemonic/ui/hook_dock_live_save_controller.gd"
 )
 
 var host = null

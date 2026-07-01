@@ -8,12 +8,12 @@ A **development episode** in Mnemonic is a time-bounded **segment** of your work
 
 ## Segments
 
-Core divides capture into segments. The default segment length is **120 seconds** (configurable from 30 to 600 seconds in Hook settings).
+Core divides capture into segments. The default segment length is **120 seconds** (configurable from 30 to 600 seconds in Mnemonic settings).
 
 While recording:
 
 1. Core continuously writes to a **live scratch** buffer for the current segment.
-2. The Hook dock **LIVE** row shows a countdown, segment index, and running significance score.
+2. The Mnemonic dock **LIVE** row shows a countdown, segment index, and running significance score.
 3. When the segment closes, Core evaluates heuristics and decides whether to **preserve** or **discard** it.
 
 Preserved segments become **clips** in your archive. Discarded segments remain in scratch until overwritten.
@@ -40,7 +40,7 @@ Segments scoring **at or above** the preserve threshold are written to the clips
 
 Segments below the threshold are discarded from scratch but still logged in `segment_history.jsonl` — so you can review what almost mattered.
 
-**Manual preserve** always wins: **Save segment** in the Hook dock flags the live segment regardless of score.
+**Manual preserve** always wins: **Save segment** in the Mnemonic dock flags the live segment regardless of score.
 
 ## Clip metadata
 
@@ -69,7 +69,7 @@ Every segment close appends a line to `control/segment_history.jsonl`:
 - Heuristic breakdown
 - Git context at close time
 
-Open **Segment log…** from the Hook dock or Core tray to browse this history.
+Open **Segment log…** from the Mnemonic dock or Core tray to browse this history.
 
 ## Why episodes, not continuous recording
 

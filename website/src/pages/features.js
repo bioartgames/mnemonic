@@ -12,7 +12,7 @@ const features = [
     bullets: [
       'Preserved clips land in your local archive with video, thumbnail, and metadata',
       'Discarded segments stay in scratch until overwritten — nothing leaves your machine without a decision',
-      'Manual preserve lets you flag the live segment anytime from the Hook dock',
+      'Manual preserve lets you flag the live segment anytime from the Mnemonic dock',
     ],
     badges: ['Segment scoring', 'Preserve threshold', 'Segment log'],
     doc: '/docs/concepts/development-episodes',
@@ -20,9 +20,9 @@ const features = [
   {
     label: 'Capture',
     title: 'Automatic capture',
-    body: 'Core runs as a Windows tray host alongside Godot. It captures your monitor, microphone, and optional system audio while the Hook addon streams editor events over a local IPC contract.',
+    body: 'Core runs as a Windows tray host alongside Godot. It captures your monitor, microphone, and optional system audio while the Mnemonic editor addon streams editor events over a local IPC contract.',
     bullets: [
-      'Start and stop recording from the Hook dock without leaving the editor',
+      'Start and stop recording from the Mnemonic dock without leaving the editor',
       'Live preview row shows countdown, segment index, and running segment score',
       'Heuristic signals tune which editor events contribute to significance',
     ],
@@ -44,7 +44,7 @@ const features = [
   {
     label: 'Story',
     title: 'Narrative reconstruction',
-    body: 'The Hook dock is your archive browser: search, filter, play video, and reveal clips in the file manager. Segment history shows kept and discarded outcomes with score breakdowns.',
+    body: 'The Mnemonic dock is your archive browser: search, filter, play video, and reveal clips in the file manager. Segment history shows kept and discarded outcomes with score breakdowns.',
     bullets: [
       'Clip tags summarize playtests, errors, saves, and iteration patterns',
       'Significance tiers help you focus on the moments that mattered',
@@ -55,15 +55,15 @@ const features = [
   },
   {
     label: 'Editor',
-    title: 'Godot-native Hook addon',
-    body: 'Mnemonic Hook lives in your Godot editor as a dock panel. It defers heavy initialization until after the loading bar finishes, keeping editor startup snappy.',
+    title: 'Godot-native Mnemonic addon',
+    body: 'Mnemonic lives in your Godot editor as a dock panel. It defers heavy initialization until after the loading bar finishes, keeping editor startup snappy.',
     bullets: [
       'Scene tracker emits save and transition events',
       'Runtime error parser captures script failures during playtests',
       'Settings for Core path, auto-launch, capture retention, and heuristic toggles',
     ],
     badges: ['Editor dock', 'Godot 4.6+', 'IPC to Core'],
-    doc: '/docs/guide/hook-dock',
+    doc: '/docs/guide/mnemonic-dock',
   },
   {
     label: 'Privacy',

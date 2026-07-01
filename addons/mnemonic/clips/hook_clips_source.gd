@@ -3,12 +3,12 @@ extends RefCounted
 
 enum SourceMode { AUTO, SCAN_ONLY }
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookClipsIndexGd = preload("res://addons/mnemonic_hook/clips/hook_clips_index.gd")
-const HookClipsIndexReaderGd = preload("res://addons/mnemonic_hook/clips/hook_clips_index_reader.gd")
-const HookClipsRowBuilderGd = preload("res://addons/mnemonic_hook/clips/hook_clips_row_builder.gd")
-const HookClipFilterGd = preload("res://addons/mnemonic_hook/clips/hook_clip_filter.gd")
-const HookSuggestedGroupsReaderGd = preload("res://addons/mnemonic_hook/clips/hook_suggested_groups_reader.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookClipsIndexGd = preload("res://addons/mnemonic/clips/hook_clips_index.gd")
+const HookClipsIndexReaderGd = preload("res://addons/mnemonic/clips/hook_clips_index_reader.gd")
+const HookClipsRowBuilderGd = preload("res://addons/mnemonic/clips/hook_clips_row_builder.gd")
+const HookClipFilterGd = preload("res://addons/mnemonic/clips/hook_clip_filter.gd")
+const HookSuggestedGroupsReaderGd = preload("res://addons/mnemonic/clips/hook_suggested_groups_reader.gd")
 
 
 static func list_for_dock(

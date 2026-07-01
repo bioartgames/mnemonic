@@ -1,10 +1,10 @@
 class_name HookResourceTracker
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const SessionEventJsonGd = preload("res://addons/mnemonic_hook/events/session_event_json.gd")
-const JsonlEventAppenderGd = preload("res://addons/mnemonic_hook/events/jsonl_event_appender.gd")
-const HookSceneTrackerGd = preload("res://addons/mnemonic_hook/trackers/hook_scene_tracker.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const SessionEventJsonGd = preload("res://addons/mnemonic/events/session_event_json.gd")
+const JsonlEventAppenderGd = preload("res://addons/mnemonic/events/jsonl_event_appender.gd")
+const HookSceneTrackerGd = preload("res://addons/mnemonic/trackers/hook_scene_tracker.gd")
 
 var _events_path: String = ""
 var _last_save_path: String = ""

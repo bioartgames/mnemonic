@@ -1,16 +1,16 @@
 class_name HookCaptureSession
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookCoreLauncherGd = preload("res://addons/mnemonic_hook/ipc/hook_core_launcher.gd")
-const HookCoreProcessProbeGd = preload("res://addons/mnemonic_hook/ipc/hook_core_process_probe.gd")
-const HookCoreShutdownGd = preload("res://addons/mnemonic_hook/ipc/hook_core_shutdown.gd")
-const HookSettingsIoGd = preload("res://addons/mnemonic_hook/ipc/hook_settings_io.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookCoreLauncherGd = preload("res://addons/mnemonic/ipc/hook_core_launcher.gd")
+const HookCoreProcessProbeGd = preload("res://addons/mnemonic/ipc/hook_core_process_probe.gd")
+const HookCoreShutdownGd = preload("res://addons/mnemonic/ipc/hook_core_shutdown.gd")
+const HookSettingsIoGd = preload("res://addons/mnemonic/ipc/hook_settings_io.gd")
 
 
 static func start_recording(plugin: EditorPlugin) -> Dictionary:
 	if plugin == null:
-		return { "ok": false, "message": "Mnemonic Hook is not ready." }
+		return { "ok": false, "message": "Mnemonic is not ready." }
 	var paths: MnemonicDataRootPaths = plugin.get_data_root_paths()
 	if paths == null or not paths.is_valid():
 		return { "ok": false, "message": "DataRoot unavailable." }
@@ -37,7 +37,7 @@ static func start_recording(plugin: EditorPlugin) -> Dictionary:
 
 static func stop_recording(plugin: EditorPlugin) -> Dictionary:
 	if plugin == null:
-		return { "ok": false, "message": "Mnemonic Hook is not ready." }
+		return { "ok": false, "message": "Mnemonic is not ready." }
 	var paths: MnemonicDataRootPaths = plugin.get_data_root_paths()
 	if paths == null or not paths.is_valid():
 		return { "ok": false, "message": "DataRoot unavailable." }

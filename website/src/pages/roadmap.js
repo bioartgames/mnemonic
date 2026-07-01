@@ -21,16 +21,16 @@ const phases = [
   },
   {
     id: 'p2',
-    title: 'Phase 2 — Godot Hook integration',
+    title: 'Phase 2 — Godot editor integration',
     status: 'done',
     summary:
       'Editor addon with dock UI, session event ingest, Core lifecycle, and end-to-end Godot + Core workflow.',
     items: [
-      'JSONL session event append from Hook to Core',
+      'JSONL session event append from Mnemonic to Core',
       'Status read, flag write, and graceful Core shutdown',
-      'Hook dock with clips list, filters, and live preview',
+      'Mnemonic dock with clips list, filters, and live preview',
       'Start/stop recording from the editor',
-      'Automated headless Hook test runners',
+      'Automated headless editor addon test runners',
     ],
   },
   {
@@ -43,13 +43,13 @@ const phases = [
       'Scene activity events and runtime error session events',
       'Heuristic score caps, dedupe, and iteration pattern derivation',
       'Clip grouping for iteration and error clusters',
-      'Significance tiers in the Hook dock',
+      'Significance tiers in the Mnemonic dock',
       'Devlog suggestion scaffolding from grouped clips',
     ],
   },
   {
     id: 'p4',
-    title: 'Phase 4 — Hook dock UX & live capture',
+    title: 'Phase 4 — Mnemonic dock UX & live capture',
     status: 'done',
     summary:
       'Polish the daily driver experience: live segment preview, overlay drawer, atomic IO, and workflow settings.',
@@ -69,7 +69,7 @@ const phases = [
       'Let you label preserved clips with your own tags — beyond heuristic signals — for personal organization and devlog planning.',
     items: [
       'User-defined tags on individual clips',
-      'Filter and search clips by custom tags in the Hook dock',
+      'Filter and search clips by custom tags in the Mnemonic dock',
       'Persist tags in clip metadata alongside heuristic tags',
     ],
   },
@@ -80,7 +80,7 @@ const phases = [
     summary:
       'Export clips you choose into a folder you pick — video and metadata together — for handoff to your editor or devlog toolchain.',
     items: [
-      'Multi-select clips in the Hook dock',
+      'Multi-select clips in the Mnemonic dock',
       'Export bundle to a user-chosen destination folder',
       'Include video files and sidecar metadata for each clip',
     ],
@@ -92,7 +92,7 @@ const phases = [
     summary:
       'Turn spoken commentary into searchable transcript excerpts attached to clips.',
     items: [
-      'ClipIndex transcript excerpts and Hook transcript search',
+      'ClipIndex transcript excerpts and Mnemonic transcript search',
       'Transcript segment timestamps aligned to video',
       'Feed transcripts into optional AI summary fields',
     ],

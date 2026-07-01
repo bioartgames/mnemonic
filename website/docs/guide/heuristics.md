@@ -1,6 +1,6 @@
 # Heuristics
 
-**Heuristics** are significance signals that contribute to a segment's score. Core evaluates them continuously during capture; Hook lets you enable or disable individual signal types.
+**Heuristics** are significance signals that contribute to a segment's score. Core evaluates them continuously during capture; Mnemonic lets you enable or disable individual signal types.
 
 ## Catalog
 
@@ -35,17 +35,17 @@
 | `commit_after_playtest` | Commit after playtest | Git | 10 | — |
 | `checkpoint_after_work` | Checkpoint after work | Git | 9 | — |
 
-Weights and caps are configurable in Hook **Capture… → Signals**. `activity_packet`, `playtest_stop`, `debug_session_stop`, and `editor_focus_changed` are hidden from that UI (pipeline-only or stop events with no score).
+Weights and caps are configurable in Mnemonic **Capture… → Signals**. `activity_packet`, `playtest_stop`, `debug_session_stop`, and `editor_focus_changed` are hidden from that UI (pipeline-only or stop events with no score).
 
 ## Activity packets
 
 Core builds **segment-scaled rolling activity packets** from atomic editor events (`scene_save`, `resource_saved`, `scene_transition`, focus changes, playtest spans). The packet window is `round(segment_duration / 2)` seconds, clamped to **15–120s** (e.g. 120s segment → 60s window, 60s segment → 30s).
 
-Packets are internal (weight 0, not shown in Hook Signals) but drive derived patterns like **edit intensity**, **scene hopping**, **script focus**, and **layout focus** — so scripting, level design, and dialog work can score without F5 playtests.
+Packets are internal (weight 0, not shown in Mnemonic Signals) but drive derived patterns like **edit intensity**, **scene hopping**, **script focus**, and **layout focus** — so scripting, level design, and dialog work can score without F5 playtests.
 
 At segment close, Core flushes any partial in-flight packet so late-window work still contributes to derived patterns.
 
-Hook emits atomics (`resource_saved` on editor `resource_saved`, `editor_focus_changed` on `main_screen_changed`); Core aggregates and derives patterns.
+Mnemonic emits atomics (`resource_saved` on editor `resource_saved`, `editor_focus_changed` on `main_screen_changed`); Core aggregates and derives patterns.
 
 ## Pattern heuristics
 
@@ -107,7 +107,7 @@ Runtime errors are **rate-limited** (10 per minute) to avoid flooding scores dur
 
 ## Tags on clips
 
-Preserved clips carry **tags** derived from heuristics that fired during the segment — e.g. `playtest`, `runtime_error`, `iteration_cycle`, `git_commit`, `script`, `layout`. Tags power Hook dock filtering.
+Preserved clips carry **tags** derived from heuristics that fired during the segment — e.g. `playtest`, `runtime_error`, `iteration_cycle`, `git_commit`, `script`, `layout`. Tags power Mnemonic dock filtering.
 
 ## Tuning for your workflow
 
@@ -123,4 +123,4 @@ Manual **Save segment** bypasses all automatic scoring.
 
 - [Development episodes](../concepts/development-episodes.md)
 - [Git-linked history](../concepts/git-linked-history.md)
-- [Hook dock](./hook-dock.md)
+- [Mnemonic dock](./mnemonic-dock.md)

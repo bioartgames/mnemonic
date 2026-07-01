@@ -6,7 +6,7 @@ All Mnemonic runtime data lives under **DataRoot**:
 %LOCALAPPDATA%\Mnemonic\
 ```
 
-This path is **not** Godot's `user://` directory. Hook and Core agree on DataRoot via a shared IPC contract (version 1).
+This path is **not** Godot's `user://` directory. Mnemonic and Core agree on DataRoot via a shared IPC contract (version 1).
 
 ## Directory structure
 
@@ -22,7 +22,7 @@ Mnemonic/
 │       └── clip.json          # Metadata for this clip
 ├── scratch/                   # Live / discarded segment buffers
 ├── events/
-│   └── session_events.jsonl   # Hook → Core editor events
+│   └── session_events.jsonl   # Mnemonic → Core editor events
 ├── control/
 │   ├── segment_history.jsonl  # Every segment close (kept + discarded)
 │   ├── flag_current.json      # Manual preserve command (ephemeral)
@@ -34,15 +34,15 @@ Mnemonic/
 
 ### settings.json
 
-Written by Hook **Capture…** panel and read by Core. Includes segment length, preserve threshold, heuristic toggles, and capture cursor. Audio device selection is configured in the **Core tray**, not Hook.
+Written by Mnemonic **Capture…** panel and read by Core. Includes segment length, preserve threshold, heuristic toggles, and capture cursor. Audio device selection is configured in the **Core tray**, not Mnemonic.
 
 ### status.json
 
-Core writes this on each poll cycle. Hook reads it for dock status, LIVE row preview, and error display.
+Core writes this on each poll cycle. Mnemonic reads it for dock status, LIVE row preview, and error display.
 
 ### session_events.jsonl
 
-Append-only log of editor events from Hook. Core tail-polls this file for heuristic scoring.
+Append-only log of editor events from Mnemonic. Core tail-polls this file for heuristic scoring.
 
 Each line is a JSON object with event type, timestamp, and payload.
 
@@ -58,7 +58,7 @@ One JSON object per line for every segment close:
 
 ### clips_index.json
 
-Index of all preserved clips for fast Hook dock listing. Version 1 schema.
+Index of all preserved clips for fast Mnemonic dock listing. Version 1 schema.
 
 ### clip.json
 
@@ -66,7 +66,7 @@ Per-clip metadata. See [Development episodes](../concepts/development-episodes.m
 
 ## Command files
 
-Hook writes ephemeral command files in `control/`:
+Mnemonic writes ephemeral command files in `control/`:
 
 | File | Purpose |
 |------|---------|

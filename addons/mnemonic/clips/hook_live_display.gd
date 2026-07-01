@@ -1,7 +1,7 @@
 class_name HookLiveDisplay
 extends RefCounted
 
-const HookClipDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_clip_display.gd")
+const HookClipDisplayGd = preload("res://addons/mnemonic/clips/hook_clip_display.gd")
 
 
 static func format_mmss(seconds: int) -> String:

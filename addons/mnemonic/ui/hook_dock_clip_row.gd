@@ -1,12 +1,12 @@
 class_name HookDockClipRow
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookDockVerticalLayoutGd = preload("res://addons/mnemonic_hook/ui/hook_dock_vertical_layout.gd")
-const HookClipThumbnailGd = preload("res://addons/mnemonic_hook/clips/hook_clip_thumbnail.gd")
-const HookSignificanceTierGd = preload("res://addons/mnemonic_hook/clips/hook_significance_tier.gd")
-const HookLiveRecIndicatorGd = preload("res://addons/mnemonic_hook/ui/hook_live_rec_indicator.gd")
-const HookDockPopupUtilsGd = preload("res://addons/mnemonic_hook/ui/hook_dock_popup_utils.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookDockVerticalLayoutGd = preload("res://addons/mnemonic/ui/hook_dock_vertical_layout.gd")
+const HookClipThumbnailGd = preload("res://addons/mnemonic/clips/hook_clip_thumbnail.gd")
+const HookSignificanceTierGd = preload("res://addons/mnemonic/clips/hook_significance_tier.gd")
+const HookLiveRecIndicatorGd = preload("res://addons/mnemonic/ui/hook_live_rec_indicator.gd")
+const HookDockPopupUtilsGd = preload("res://addons/mnemonic/ui/hook_dock_popup_utils.gd")
 
 const MENU_REVEAL := 0
 const MENU_PLAY := 1

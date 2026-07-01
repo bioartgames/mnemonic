@@ -1,6 +1,6 @@
 # Mnemonic Website
 
-Official documentation site for [Mnemonic Hook](https://github.com/bioartgames/mnemonic-hook) — built with [Docusaurus](https://docusaurus.io/).
+Official documentation site for [Mnemonic](https://github.com/bioartgames/mnemonic) — built with [Docusaurus](https://docusaurus.io/).
 
 ## Local development
 
@@ -10,7 +10,7 @@ npm install
 npm start
 ```
 
-Opens at [http://localhost:3000/mnemonic-hook/](http://localhost:3000/mnemonic-hook/).
+Opens at [http://localhost:3000/mnemonic/](http://localhost:3000/mnemonic/).
 
 ## Build
 
@@ -28,7 +28,7 @@ The site deploys automatically via GitHub Actions when changes under `website/` 
 1. Go to **Settings → Pages**
 2. Set **Source** to **GitHub Actions**
 
-Live URL: [https://bioartgames.github.io/mnemonic-hook/](https://bioartgames.github.io/mnemonic-hook/)
+Live URL: [https://bioartgames.github.io/mnemonic/](https://bioartgames.github.io/mnemonic/)
 
 ### Manual deploy (alternative)
 

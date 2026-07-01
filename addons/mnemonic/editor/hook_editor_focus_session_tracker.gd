@@ -1,11 +1,11 @@
 class_name HookEditorFocusSessionTracker
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const SessionEventJsonGd = preload("res://addons/mnemonic_hook/events/session_event_json.gd")
-const JsonlEventAppenderGd = preload("res://addons/mnemonic_hook/events/jsonl_event_appender.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const SessionEventJsonGd = preload("res://addons/mnemonic/events/session_event_json.gd")
+const JsonlEventAppenderGd = preload("res://addons/mnemonic/events/jsonl_event_appender.gd")
 const HookEditorFocusTrackerGd = preload(
-	"res://addons/mnemonic_hook/editor/hook_editor_focus_tracker.gd"
+	"res://addons/mnemonic/editor/hook_editor_focus_tracker.gd"
 )
 
 var _events_path: String = ""

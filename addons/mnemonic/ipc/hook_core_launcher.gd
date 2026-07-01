@@ -1,10 +1,10 @@
 class_name HookCoreLauncher
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookCoreProcessProbeGd = preload("res://addons/mnemonic_hook/ipc/hook_core_process_probe.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookCoreProcessProbeGd = preload("res://addons/mnemonic/ipc/hook_core_process_probe.gd")
 
-const BUNDLED_CORE_RES_PATH := "res://addons/mnemonic_hook/core/Mnemonic.Windows.exe"
+const BUNDLED_CORE_RES_PATH := "res://addons/mnemonic/core/Mnemonic.Windows.exe"
 
 
 static func ensure_editor_setting_registered(editor_interface: EditorInterface) -> void:
@@ -59,7 +59,7 @@ static func build_kind_label(exe_path: String) -> String:
 		return "Debug"
 	if "/dist/smoke/" in norm:
 		return "smoke"
-	if "/addons/mnemonic_hook/core/" in norm or norm.ends_with("/core/mnemonic.windows.exe"):
+	if "/addons/mnemonic/core/" in norm or norm.ends_with("/core/mnemonic.windows.exe"):
 		return "bundled"
 	return "custom"
 

@@ -1,34 +1,34 @@
 @tool
-class_name EditorMnemonicHookDock
+class_name EditorMnemonicDock
 extends MarginContainer
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookDockThemeGd = preload("res://addons/mnemonic_hook/ui/hook_dock_theme.gd")
-const HookSettingsPanelGd = preload("res://addons/mnemonic_hook/ui/hook_settings_panel.gd")
-const HookClipsDrawerGripGd = preload("res://addons/mnemonic_hook/ui/hook_clips_drawer_grip.gd")
-const HookDockVerticalLayoutGd = preload("res://addons/mnemonic_hook/ui/hook_dock_vertical_layout.gd")
-const HookDockFilterPanelGd = preload("res://addons/mnemonic_hook/ui/hook_dock_filter_panel.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookDockThemeGd = preload("res://addons/mnemonic/ui/hook_dock_theme.gd")
+const HookSettingsPanelGd = preload("res://addons/mnemonic/ui/hook_settings_panel.gd")
+const HookClipsDrawerGripGd = preload("res://addons/mnemonic/ui/hook_clips_drawer_grip.gd")
+const HookDockVerticalLayoutGd = preload("res://addons/mnemonic/ui/hook_dock_vertical_layout.gd")
+const HookDockFilterPanelGd = preload("res://addons/mnemonic/ui/hook_dock_filter_panel.gd")
 const HookDockLiveSaveControllerGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_live_save_controller.gd"
+	"res://addons/mnemonic/ui/hook_dock_live_save_controller.gd"
 )
-const HookLiveSavePollGd = preload("res://addons/mnemonic_hook/ui/hook_live_save_poll.gd")
-const HookDockHostGd = preload("res://addons/mnemonic_hook/ui/hook_dock_host.gd")
-const HookDockToolbarStyleGd = preload("res://addons/mnemonic_hook/ui/hook_dock_toolbar_style.gd")
-const HookDockStatusToastGd = preload("res://addons/mnemonic_hook/ui/hook_dock_status_toast.gd")
-const HookDockSettingsMenuGd = preload("res://addons/mnemonic_hook/ui/hook_dock_settings_menu.gd")
-const HookDockTransportBarGd = preload("res://addons/mnemonic_hook/ui/hook_dock_transport_bar.gd")
-const HookDockClipsDrawerGd = preload("res://addons/mnemonic_hook/ui/hook_dock_clips_drawer.gd")
+const HookLiveSavePollGd = preload("res://addons/mnemonic/ui/hook_live_save_poll.gd")
+const HookDockHostGd = preload("res://addons/mnemonic/ui/hook_dock_host.gd")
+const HookDockToolbarStyleGd = preload("res://addons/mnemonic/ui/hook_dock_toolbar_style.gd")
+const HookDockStatusToastGd = preload("res://addons/mnemonic/ui/hook_dock_status_toast.gd")
+const HookDockSettingsMenuGd = preload("res://addons/mnemonic/ui/hook_dock_settings_menu.gd")
+const HookDockTransportBarGd = preload("res://addons/mnemonic/ui/hook_dock_transport_bar.gd")
+const HookDockClipsDrawerGd = preload("res://addons/mnemonic/ui/hook_dock_clips_drawer.gd")
 const HookDockSegmentLogPanelGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_segment_log_panel.gd"
+	"res://addons/mnemonic/ui/hook_dock_segment_log_panel.gd"
 )
 const HookDockFilterControllerGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_filter_controller.gd"
+	"res://addons/mnemonic/ui/hook_dock_filter_controller.gd"
 )
 const HookDockLiveSessionControllerGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_live_session_controller.gd"
+	"res://addons/mnemonic/ui/hook_dock_live_session_controller.gd"
 )
 const HookDockClipsListControllerGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_dock_clips_list_controller.gd"
+	"res://addons/mnemonic/ui/hook_dock_clips_list_controller.gd"
 )
 
 var _plugin: EditorPlugin = null

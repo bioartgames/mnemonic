@@ -1,9 +1,9 @@
 class_name HookClipsIndex
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookClipsRowBuilderGd = preload("res://addons/mnemonic_hook/clips/hook_clips_row_builder.gd")
-const HookClipThumbnailGd = preload("res://addons/mnemonic_hook/clips/hook_clip_thumbnail.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookClipsRowBuilderGd = preload("res://addons/mnemonic/clips/hook_clips_row_builder.gd")
+const HookClipThumbnailGd = preload("res://addons/mnemonic/clips/hook_clip_thumbnail.gd")
 
 
 static func list_clips(

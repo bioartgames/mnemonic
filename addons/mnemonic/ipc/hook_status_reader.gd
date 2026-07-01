@@ -1,9 +1,9 @@
 class_name HookStatusReader
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookStatusSnapshotGd = preload("res://addons/mnemonic_hook/ipc/hook_status_snapshot.gd")
-const HookStatusReadResultGd = preload("res://addons/mnemonic_hook/ipc/hook_status_read_result.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookStatusSnapshotGd = preload("res://addons/mnemonic/ipc/hook_status_snapshot.gd")
+const HookStatusReadResultGd = preload("res://addons/mnemonic/ipc/hook_status_read_result.gd")
 
 var _paths: MnemonicDataRootPaths
 var _contract_mismatch_warned: bool = false
@@ -37,7 +37,7 @@ func read() -> HookStatusReadResult:
 	if found_version != Mc.IPC_CONTRACT_VERSION:
 		if not _contract_mismatch_warned:
 			push_warning(
-				"Mnemonic Hook: status.json contract_version=%d (expected %d); status ignored."
+				"Mnemonic: status.json contract_version=%d (expected %d); status ignored."
 				% [found_version, Mc.IPC_CONTRACT_VERSION]
 			)
 			_contract_mismatch_warned = true

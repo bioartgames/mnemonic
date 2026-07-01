@@ -2,7 +2,7 @@ class_name HookDockClipListContext
 extends RefCounted
 
 const HookClipThumbnailQueueGd = preload(
-	"res://addons/mnemonic_hook/clips/hook_clip_thumbnail_queue.gd"
+	"res://addons/mnemonic/clips/hook_clip_thumbnail_queue.gd"
 )
 
 var plugin: EditorPlugin = null

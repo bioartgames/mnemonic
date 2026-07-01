@@ -8,18 +8,18 @@ Mnemonic requires **Windows 10 or later** and **Godot 4.6+**.
 
 ## Quick install (release zip)
 
-The release zip includes a self-contained Mnemonic Core under `mnemonic_hook/core/` — no .NET SDK or FFmpeg install required.
+The release zip includes a self-contained Mnemonic Core under `addons/mnemonic/core/` — no .NET SDK or FFmpeg install required.
 
-1. Download the [latest release zip](https://github.com/bioartgames/mnemonic-hook/releases/latest) from GitHub Releases.
-2. Extract the zip and copy `mnemonic_hook/` into your Godot project's `addons/` folder.
-3. Open the project in Godot → **Project → Plugins** → enable **Mnemonic Hook**.
-4. Click **Start recording** in the Mnemonic dock. Hook launches bundled Core automatically (**Core started (bundled)**).
+1. Download the [latest release zip](https://github.com/bioartgames/mnemonic/releases/latest) from GitHub Releases.
+2. Extract the zip and copy `mnemonic/` into your Godot project's `addons/` folder.
+3. Open the project in Godot → **Project → Plugins** → enable **Mnemonic**.
+4. Click **Start recording** in the Mnemonic dock. Mnemonic launches bundled Core automatically (**Core started (bundled)**).
 
-See also `addons/mnemonic_hook/INSTALL.md` inside the addon folder.
+See also `addons/mnemonic/INSTALL.md` inside the addon folder.
 
 ### Custom Core path
 
-Set an absolute path in **Editor → Editor Settings → mnemonic_hook → Core Windows Exe** to override the bundled executable.
+Set an absolute path in **Editor → Editor Settings → mnemonic → Core Windows Exe** to override the bundled executable.
 
 ## Data location
 
@@ -36,7 +36,7 @@ This is **not** Godot's `user://` path. See the [DataRoot guide](./guide/data-ro
 | Requirement | Notes |
 |-------------|-------|
 | Windows 10+ | Core capture uses Windows APIs |
-| Godot 4.6+ | Hook targets Godot 4.x editor APIs |
+| Godot 4.6+ | Mnemonic targets Godot 4.x editor APIs |
 | Git (optional) | Enriches clips with branch and commit metadata |
 
 ## Troubleshooting
@@ -50,6 +50,6 @@ This is **not** Godot's `user://` path. See the [DataRoot guide](./guide/data-ro
 
 ## Next steps
 
-- [Hook dock guide](./guide/hook-dock.md)
+- [Mnemonic dock guide](./guide/mnemonic-dock.md)
 - [Core tray guide](./guide/core-tray.md)
 - [Development episodes](./concepts/development-episodes.md)

@@ -1,7 +1,7 @@
 class_name HookClipFilter
 extends RefCounted
 
-const HookClipSearchGd = preload("res://addons/mnemonic_hook/clips/hook_clip_search.gd")
+const HookClipSearchGd = preload("res://addons/mnemonic/clips/hook_clip_search.gd")
 
 
 static func matches(row: Dictionary, criteria) -> bool:

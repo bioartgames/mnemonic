@@ -1,7 +1,7 @@
 class_name HookHeuristicCatalog
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 ## Pipeline-only signals (still in catalog for Core parity; hidden from Capture settings UI).
 const SETTINGS_UI_HIDDEN_TYPES: Array[String] = [

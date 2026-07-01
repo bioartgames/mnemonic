@@ -1,10 +1,10 @@
 class_name HookClipDisplay
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookSettingsIoGd = preload("res://addons/mnemonic_hook/ipc/hook_settings_io.gd")
-const HookSignificanceTierGd = preload("res://addons/mnemonic_hook/clips/hook_significance_tier.gd")
-const HookTimeDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_time_display.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookSettingsIoGd = preload("res://addons/mnemonic/ipc/hook_settings_io.gd")
+const HookSignificanceTierGd = preload("res://addons/mnemonic/clips/hook_significance_tier.gd")
+const HookTimeDisplayGd = preload("res://addons/mnemonic/clips/hook_time_display.gd")
 
 const _CONTEXT_TAGS: Array[String] = ["playtest", "save", "commit", "transition"]
 

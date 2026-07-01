@@ -1,10 +1,10 @@
 class_name HookPlaytestTracker
 extends RefCounted
 
-const SessionEventJsonGd = preload("res://addons/mnemonic_hook/events/session_event_json.gd")
-const JsonlEventAppenderGd = preload("res://addons/mnemonic_hook/events/jsonl_event_appender.gd")
+const SessionEventJsonGd = preload("res://addons/mnemonic/events/session_event_json.gd")
+const JsonlEventAppenderGd = preload("res://addons/mnemonic/events/jsonl_event_appender.gd")
 const HookEditorSceneSnapshotGd = preload(
-	"res://addons/mnemonic_hook/ipc/hook_editor_scene_snapshot.gd"
+	"res://addons/mnemonic/ipc/hook_editor_scene_snapshot.gd"
 )
 
 const ERROR_CAPTURE_GRACE_SEC := 5.0

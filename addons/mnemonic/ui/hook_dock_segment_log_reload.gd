@@ -1,9 +1,9 @@
 class_name HookDockSegmentLogReload
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const SegmentHistoryIoGd = preload("res://addons/mnemonic_hook/ipc/segment_history_io.gd")
-const HookClipSearchGd = preload("res://addons/mnemonic_hook/clips/hook_clip_search.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const SegmentHistoryIoGd = preload("res://addons/mnemonic/ipc/segment_history_io.gd")
+const HookClipSearchGd = preload("res://addons/mnemonic/clips/hook_clip_search.gd")
 
 
 static func execute(ctx: HookDockSegmentLogContext) -> void:

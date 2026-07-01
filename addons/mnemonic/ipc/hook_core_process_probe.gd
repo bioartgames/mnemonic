@@ -1,7 +1,7 @@
 class_name HookCoreProcessProbe
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 ## Must stay false: true flashes a visible console every STATUS_POLL_INTERVAL_SEC.
 const EXECUTE_OPEN_CONSOLE := false

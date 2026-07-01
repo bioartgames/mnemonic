@@ -1,8 +1,8 @@
 class_name HookDockLiveSaveController
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookLiveSavePollGd = preload("res://addons/mnemonic_hook/ui/hook_live_save_poll.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookLiveSavePollGd = preload("res://addons/mnemonic/ui/hook_live_save_poll.gd")
 
 var pending: bool = false
 var segment_index: int = -1

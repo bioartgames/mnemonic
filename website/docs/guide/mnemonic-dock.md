@@ -1,6 +1,6 @@
-# Hook dock
+# Mnemonic dock
 
-The **Mnemonic Hook** dock is the primary interface inside the Godot editor. It lives in the **left upper** dock slot and splits into transport controls above and the clips archive below.
+The **Mnemonic** dock is the primary interface inside the Godot editor. It lives in the **left upper** dock slot and splits into transport controls above and the clips archive below.
 
 ## Layout
 
@@ -16,7 +16,7 @@ The **Mnemonic Hook** dock is the primary interface inside the Godot editor. It 
 └─────────────────────────────────┘
 ```
 
-Drag the splitter between panes to resize. The offset persists in Editor Settings (`mnemonic_hook/dock_clips_split_offset`).
+Drag the splitter between panes to resize. The offset persists in Editor Settings (`mnemonic/dock_clips_split_offset`).
 
 ## Transport controls
 
@@ -56,12 +56,12 @@ The gear button opens two areas:
 - **Stop recording when Godot closes**
 - **Verbose logging**
 
-These map to Editor Settings keys under `mnemonic_hook/`.
+These map to Editor Settings keys under `mnemonic/`.
 
 ### Editor Settings vs settings.json
 
-- **`mnemonic_hook/auto_launch_core`** (default **off**) — start recording when you open this project in Godot
-- **`mnemonic_hook/stop_core_on_editor_exit`** (default **off**) — stop recording and quit Mnemonic when you close Godot
+- **`mnemonic/auto_launch_core`** (default **off**) — start recording when you open this project in Godot
+- **`mnemonic/stop_core_on_editor_exit`** (default **off**) — stop recording and quit Mnemonic when you close Godot
 - **`settings.json` → `start_recording_on_launch`** (default **on**) — written when you click **Start recording**
 
 ### Capture… panel

@@ -1,14 +1,14 @@
 class_name HookClipsRowBuilder
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookClipDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_clip_display.gd")
-const HookClipThumbnailGd = preload("res://addons/mnemonic_hook/clips/hook_clip_thumbnail.gd")
-const HookClipSceneTagsGd = preload("res://addons/mnemonic_hook/clips/hook_clip_scene_tags.gd")
-const HookClipSearchGd = preload("res://addons/mnemonic_hook/clips/hook_clip_search.gd")
-const HookSignificanceTierGd = preload("res://addons/mnemonic_hook/clips/hook_significance_tier.gd")
-const HookLiveDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_live_display.gd")
-const HookLiveScratchRevealGd = preload("res://addons/mnemonic_hook/ui/hook_live_scratch_reveal.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookClipDisplayGd = preload("res://addons/mnemonic/clips/hook_clip_display.gd")
+const HookClipThumbnailGd = preload("res://addons/mnemonic/clips/hook_clip_thumbnail.gd")
+const HookClipSceneTagsGd = preload("res://addons/mnemonic/clips/hook_clip_scene_tags.gd")
+const HookClipSearchGd = preload("res://addons/mnemonic/clips/hook_clip_search.gd")
+const HookSignificanceTierGd = preload("res://addons/mnemonic/clips/hook_significance_tier.gd")
+const HookLiveDisplayGd = preload("res://addons/mnemonic/clips/hook_live_display.gd")
+const HookLiveScratchRevealGd = preload("res://addons/mnemonic/ui/hook_live_scratch_reveal.gd")
 
 
 static func from_live_preview(

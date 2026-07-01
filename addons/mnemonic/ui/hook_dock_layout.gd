@@ -1,7 +1,7 @@
 class_name HookDockLayout
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 static var _editor_interface: EditorInterface = null
 

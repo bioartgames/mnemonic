@@ -11,10 +11,10 @@ const config = {
   favicon: 'img/favicon.svg',
 
   url: 'https://bioartgames.github.io',
-  baseUrl: '/mnemonic-hook/',
+  baseUrl: '/mnemonic/',
 
   organizationName: 'bioartgames',
-  projectName: 'mnemonic-hook',
+  projectName: 'mnemonic',
 
   onBrokenLinks: 'throw',
 
@@ -39,7 +39,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/bioartgames/mnemonic-hook/tree/main/website/',
+          editUrl: 'https://github.com/bioartgames/mnemonic/tree/main/website/',
         },
         blog: false,
         theme: {
@@ -80,14 +80,14 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/bioartgames/mnemonic-hook/releases/latest',
+            href: 'https://github.com/bioartgames/mnemonic/releases/latest',
             label: 'Download',
             position: 'left',
           },
           {to: '/docs/intro', label: 'Docs', position: 'left'},
           {to: '/docs/faq', label: 'FAQ', position: 'left'},
           {
-            href: 'https://github.com/bioartgames/mnemonic-hook',
+            href: 'https://github.com/bioartgames/mnemonic',
             label: 'GitHub',
             position: 'left',
           },

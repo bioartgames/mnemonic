@@ -2,7 +2,7 @@ class_name HookDockStatusToast
 extends RefCounted
 
 
-const HookDockHostGd = preload("res://addons/mnemonic_hook/ui/hook_dock_host.gd")
+const HookDockHostGd = preload("res://addons/mnemonic/ui/hook_dock_host.gd")
 
 static func show(host, message: String, duration_sec: float = 3.0) -> void:
 	if host == null or not is_instance_valid(host.toast_label) or not is_instance_valid(host.toast_timer):

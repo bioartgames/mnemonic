@@ -3,9 +3,9 @@ extends RefCounted
 
 signal settings_changed
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 const HookSignalsTableLayoutGd = preload(
-	"res://addons/mnemonic_hook/ui/hook_signals_table_layout.gd"
+	"res://addons/mnemonic/ui/hook_signals_table_layout.gd"
 )
 
 var _type_id: String = ""

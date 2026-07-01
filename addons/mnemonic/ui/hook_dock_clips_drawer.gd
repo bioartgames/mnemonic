@@ -1,9 +1,9 @@
 class_name HookDockClipsDrawer
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const HookDockLayoutGd = preload("res://addons/mnemonic_hook/ui/hook_dock_layout.gd")
-const HookDockHostGd = preload("res://addons/mnemonic_hook/ui/hook_dock_host.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const HookDockLayoutGd = preload("res://addons/mnemonic/ui/hook_dock_layout.gd")
+const HookDockHostGd = preload("res://addons/mnemonic/ui/hook_dock_host.gd")
 
 var host
 var grip: Control

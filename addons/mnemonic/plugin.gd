@@ -1,18 +1,18 @@
 @tool
 extends EditorPlugin
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const DataRootPathsGd = preload("res://addons/mnemonic_hook/ipc/data_root_paths.gd")
-const HookCoreLauncherGd = preload("res://addons/mnemonic_hook/ipc/hook_core_launcher.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const DataRootPathsGd = preload("res://addons/mnemonic/ipc/data_root_paths.gd")
+const HookCoreLauncherGd = preload("res://addons/mnemonic/ipc/hook_core_launcher.gd")
 const HookEditorWorkflowSettingsGd = preload(
-	"res://addons/mnemonic_hook/ipc/hook_editor_workflow_settings.gd"
+	"res://addons/mnemonic/ipc/hook_editor_workflow_settings.gd"
 )
-const HookDockLayoutGd = preload("res://addons/mnemonic_hook/ui/hook_dock_layout.gd")
-const HookPluginWindowLayoutGd = preload("res://addons/mnemonic_hook/ui/hook_plugin_window_layout.gd")
-const HookDockShortcutGd = preload("res://addons/mnemonic_hook/ui/hook_dock_shortcut.gd")
-const HookEditorStartupGateGd = preload("res://addons/mnemonic_hook/ipc/hook_editor_startup_gate.gd")
+const HookDockLayoutGd = preload("res://addons/mnemonic/ui/hook_dock_layout.gd")
+const HookPluginWindowLayoutGd = preload("res://addons/mnemonic/ui/hook_plugin_window_layout.gd")
+const HookDockShortcutGd = preload("res://addons/mnemonic/ui/hook_dock_shortcut.gd")
+const HookEditorStartupGateGd = preload("res://addons/mnemonic/ipc/hook_editor_startup_gate.gd")
 const HookEditorSceneSnapshotGd = preload(
-	"res://addons/mnemonic_hook/ipc/hook_editor_scene_snapshot.gd"
+	"res://addons/mnemonic/ipc/hook_editor_scene_snapshot.gd"
 )
 const _SIGNAL_RESOURCE_SAVED := &"resource_saved"
 
@@ -38,7 +38,7 @@ var _playtest_timer: Timer
 var _git_timer: Timer
 var _focus_session_timer: Timer
 var _status_timer: Timer
-var _dock: EditorMnemonicHookDock
+var _dock: EditorMnemonicDock
 var _runtime_error_debugger: HookRuntimeErrorDebuggerPlugin
 
 var _t_enter_tree_us := 0
@@ -48,14 +48,14 @@ var _t_activate_us := 0
 func _enter_tree() -> void:
 	_paths = DataRootPathsGd.new()
 	if not _paths.is_supported_platform():
-		push_warning("Mnemonic Hook: Windows only in v1; paths unavailable.")
+		push_warning("Mnemonic: Windows only in v1; paths unavailable.")
 		return
 	if not _paths.is_valid():
-		push_error("Mnemonic Hook: Could not resolve DataRoot (LOCALAPPDATA missing).")
+		push_error("Mnemonic: Could not resolve DataRoot (LOCALAPPDATA missing).")
 		return
-	_log_verbose("Mnemonic Hook: DataRoot = %s" % _paths.get_root())
+	_log_verbose("Mnemonic: DataRoot = %s" % _paths.get_root())
 	_t_enter_tree_us = Time.get_ticks_usec()
-	_log_verbose("Mnemonic Hook: _enter_tree_us=%d" % _t_enter_tree_us)
+	_log_verbose("Mnemonic: _enter_tree_us=%d" % _t_enter_tree_us)
 	HookCoreLauncherGd.ensure_editor_setting_registered(get_editor_interface())
 	HookDockLayoutGd.ensure_editor_setting_registered(get_editor_interface())
 	HookEditorWorkflowSettingsGd.ensure_registered(get_editor_interface())
@@ -155,14 +155,14 @@ func _activate_after_editor_layout() -> void:
 	_focus_session_timer.start()
 	_status_timer.start()
 
-	_dock = EditorMnemonicHookDock.new()
+	_dock = EditorMnemonicDock.new()
 	_dock.setup(self)
 	_dock_slot = _pending_dock_slot
 	add_control_to_dock(_dock_slot, _dock, HookDockShortcutGd.make_default())
 	call_deferred("_deferred_plugin_ready")
 
 	var dt_ms := int((_t_activate_us - _t_enter_tree_us) / 1000)
-	_log_verbose("Mnemonic Hook: activate_after_editor_layout dt=%d ms" % dt_ms)
+	_log_verbose("Mnemonic: activate_after_editor_layout dt=%d ms" % dt_ms)
 
 
 func _deferred_plugin_ready() -> void:
@@ -186,7 +186,7 @@ func _maybe_auto_start_recording_on_open() -> void:
 			str(result.get("message", "Starting recording…"))
 			if bool(result.get("ok", false))
 			else (
-				"Auto-start failed — set mnemonic_hook/core_windows_exe in Editor Settings "
+				"Auto-start failed — set mnemonic/core_windows_exe in Editor Settings "
 				+ "or build mnemonic-core"
 			)
 		)
@@ -296,7 +296,7 @@ func _connect_resource_saved_if_available() -> void:
 	if _resource_saved_connected:
 		return
 	if not has_signal(_SIGNAL_RESOURCE_SAVED):
-		push_warning("Mnemonic Hook: resource_saved signal unavailable; resource_saved events disabled.")
+		push_warning("Mnemonic: resource_saved signal unavailable; resource_saved events disabled.")
 		return
 	connect(_SIGNAL_RESOURCE_SAVED, _on_resource_saved)
 	_resource_saved_connected = true
@@ -377,39 +377,39 @@ func get_status_snapshot() -> HookStatusSnapshot:
 
 func request_manual_preserve() -> bool:
 	if _paths == null or not _paths.is_valid():
-		push_warning("Mnemonic Hook: cannot write flag; DataRoot unavailable.")
+		push_warning("Mnemonic: cannot write flag; DataRoot unavailable.")
 		return false
 	return HookFlagWriter.write_flag_current(_paths)
 
 
 func request_pause_capture() -> bool:
 	if _paths == null or not _paths.is_valid():
-		push_warning("Mnemonic Hook: cannot write pause command; DataRoot unavailable.")
+		push_warning("Mnemonic: cannot write pause command; DataRoot unavailable.")
 		return false
 	return HookCaptureCommandWriter.write_pause(_paths)
 
 
 func request_resume_capture() -> bool:
 	if _paths == null or not _paths.is_valid():
-		push_warning("Mnemonic Hook: cannot write resume command; DataRoot unavailable.")
+		push_warning("Mnemonic: cannot write resume command; DataRoot unavailable.")
 		return false
 	return HookCaptureCommandWriter.write_resume(_paths)
 
 
 func request_rebuild_clips_index() -> bool:
 	if _paths == null or not _paths.is_valid():
-		push_warning("Mnemonic Hook: cannot write rebuild clips index command; DataRoot unavailable.")
+		push_warning("Mnemonic: cannot write rebuild clips index command; DataRoot unavailable.")
 		return false
 	return HookCaptureCommandWriter.write_rebuild_clips_index(_paths)
 
 
 func launch_core() -> Dictionary:
 	if _paths == null or not _paths.is_valid():
-		push_warning("Mnemonic Hook: cannot launch Core; DataRoot unavailable.")
+		push_warning("Mnemonic: cannot launch Core; DataRoot unavailable.")
 		return {
 			"ok": false,
 			"message": (
-				"Launch failed — set mnemonic_hook/core_windows_exe in Editor Settings "
+				"Launch failed — set mnemonic/core_windows_exe in Editor Settings "
 				+ "or build mnemonic-core"
 			),
 		}

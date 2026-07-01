@@ -1,7 +1,7 @@
 class_name HookClipThumbnailQueue
 extends RefCounted
 
-const HookClipThumbnailGd = preload("res://addons/mnemonic_hook/clips/hook_clip_thumbnail.gd")
+const HookClipThumbnailGd = preload("res://addons/mnemonic/clips/hook_clip_thumbnail.gd")
 
 var _generation := 0
 var _pending: Array[Dictionary] = []

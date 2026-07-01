@@ -1,7 +1,7 @@
 class_name HookSignalsTableLayout
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 const COLUMN_COUNT := 4
 
 

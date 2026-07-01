@@ -13,14 +13,14 @@ Mnemonic captures your development session **passively**. You do not start and s
 | **Video** | Monitor capture via FFmpeg | Visual record of editor and playtest |
 | **Microphone** | WASAPI input device | Spoken commentary and thinking aloud |
 | **System audio** | WASAPI loopback (optional) | In-engine sounds during playtests |
-| **Editor events** | Hook addon → JSONL ingest | Scene saves, playtests, errors, transitions |
+| **Editor events** | Mnemonic addon → JSONL ingest | Scene saves, playtests, errors, transitions |
 
 Capture settings (segment length, preserve threshold, cursor capture, heuristic toggles) write to `%LOCALAPPDATA%\Mnemonic\settings.json` — the same file Core reads.
 
-## Hook → Core event flow
+## Mnemonic → Core event flow
 
 ```
-Godot Editor (Hook addon)
+Godot Editor (Mnemonic addon)
     │
     │  session events (JSONL append)
     ▼
@@ -35,11 +35,11 @@ Mnemonic Core (tray host)
     └── Segment close → clip or discard
 ```
 
-The Hook addon never encodes video. It emits lightweight events and reads status from Core's IPC files.
+The Mnemonic editor addon never encodes video. It emits lightweight events and reads status from Core's IPC files.
 
 ## Starting and stopping
 
-From the Hook dock:
+From the Mnemonic dock:
 
 - **Start recording** — launches Core if needed and begins capture
 - **Stop recording** — sends graceful shutdown via `exit_core`
@@ -48,14 +48,14 @@ Core is a single-instance Windows process. A second launch shows an "already run
 
 ### Auto-launch options
 
-In Hook settings:
+In Mnemonic settings:
 
 - **Start recording when Godot opens** — optional convenience
 - **Stop recording when Godot closes** — prevents orphaned capture hosts
 
 ## Live preview
 
-While recording, the Hook dock **LIVE** row shows:
+While recording, the Mnemonic dock **LIVE** row shows:
 
 - Segment countdown (e.g. `3m left`)
 - Current segment index
@@ -71,10 +71,10 @@ This is the core design bet: **capture everything in scratch, keep what mattered
 
 ## Performance
 
-Capture and encoding run in the Core process, not inside Godot. Hook defers heavy initialization (dock layout, clip thumbnails, process probes) until after the editor loading bar completes.
+Capture and encoding run in the Core process, not inside Godot. Mnemonic defers heavy initialization (dock layout, clip thumbnails, process probes) until after the editor loading bar completes.
 
 ## Related
 
 - [Development episodes](./development-episodes.md)
-- [Hook dock guide](../guide/hook-dock.md)
+- [Mnemonic dock guide](../guide/mnemonic-dock.md)
 - [Core tray guide](../guide/core-tray.md)

@@ -1,8 +1,8 @@
 class_name HookClipGroupLabel
 extends RefCounted
 
-const HookClipDisplayGd = preload("res://addons/mnemonic_hook/clips/hook_clip_display.gd")
-const HookCalendarLabelsGd = preload("res://addons/mnemonic_hook/clips/hook_calendar_labels.gd")
+const HookClipDisplayGd = preload("res://addons/mnemonic/clips/hook_clip_display.gd")
+const HookCalendarLabelsGd = preload("res://addons/mnemonic/clips/hook_calendar_labels.gd")
 
 
 static func format_header(group: Dictionary, compact: bool) -> String:

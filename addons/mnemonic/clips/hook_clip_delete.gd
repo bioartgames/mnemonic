@@ -1,7 +1,7 @@
 class_name HookClipDelete
 extends RefCounted
 
-const HookPathGuardGd = preload("res://addons/mnemonic_hook/ipc/hook_path_guard.gd")
+const HookPathGuardGd = preload("res://addons/mnemonic/ipc/hook_path_guard.gd")
 
 
 static func delete_clip_folder(folder_abs: String, clips_dir: String) -> bool:

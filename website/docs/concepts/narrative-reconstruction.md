@@ -19,7 +19,7 @@ You already did the work. Mnemonic preserved the evidence.
 
 ## Browsing and filtering
 
-The Hook dock is your primary archive browser:
+The Mnemonic dock is your primary archive browser:
 
 1. **Clips list** — newest preserved episodes, with LIVE row during capture
 2. **Filter clips…** — narrow by branch, tags, significance, or search terms
@@ -63,4 +63,4 @@ The [roadmap](/roadmap) includes:
 
 - [Development episodes](./development-episodes.md)
 - [Git-linked history](./git-linked-history.md)
-- [Hook dock guide](../guide/hook-dock.md)
+- [Mnemonic dock guide](../guide/mnemonic-dock.md)

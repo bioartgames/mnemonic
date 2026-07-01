@@ -1,8 +1,8 @@
 class_name HookLiveSaveOverlay
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const PulseShader = preload("res://addons/mnemonic_hook/ui/hook_live_save_pulse.gdshader")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const PulseShader = preload("res://addons/mnemonic/ui/hook_live_save_pulse.gdshader")
 
 const _LAYOUT_RETRY_MAX := 10
 

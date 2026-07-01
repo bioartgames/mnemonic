@@ -1,12 +1,12 @@
 class_name HookGitPoll
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
-const GitRunnerGd = preload("res://addons/mnemonic_hook/git/git_runner.gd")
-const GitAheadCountGd = preload("res://addons/mnemonic_hook/git/git_ahead_count.gd")
-const SessionEventJsonGd = preload("res://addons/mnemonic_hook/events/session_event_json.gd")
-const JsonlEventAppenderGd = preload("res://addons/mnemonic_hook/events/jsonl_event_appender.gd")
-const JsonlGitDeduperGd = preload("res://addons/mnemonic_hook/events/jsonl_git_deduper.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
+const GitRunnerGd = preload("res://addons/mnemonic/git/git_runner.gd")
+const GitAheadCountGd = preload("res://addons/mnemonic/git/git_ahead_count.gd")
+const SessionEventJsonGd = preload("res://addons/mnemonic/events/session_event_json.gd")
+const JsonlEventAppenderGd = preload("res://addons/mnemonic/events/jsonl_event_appender.gd")
+const JsonlGitDeduperGd = preload("res://addons/mnemonic/events/jsonl_git_deduper.gd")
 
 var _paths: MnemonicDataRootPaths
 var _events_path: String = ""
@@ -126,6 +126,6 @@ func _read_snapshot() -> Dictionary:
 
 func _disable_probe() -> void:
 	if not _git_warned_failure:
-		push_warning("Mnemonic Hook: git probe disabled (not a git repo or git unavailable).")
+		push_warning("Mnemonic: git probe disabled (not a git repo or git unavailable).")
 		_git_warned_failure = true
 	_probe_disabled = true

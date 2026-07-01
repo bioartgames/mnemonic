@@ -20,7 +20,7 @@ const sidebars = {
       type: 'category',
       label: 'Guides',
       items: [
-        'guide/hook-dock',
+        'guide/mnemonic-dock',
         'guide/core-tray',
         'guide/heuristics',
         'guide/data-root',

@@ -1,7 +1,7 @@
 class_name HookRuntimeErrorParser
 extends RefCounted
 
-const Mc = preload("res://addons/mnemonic_hook/ipc/mnemonic_constants.gd")
+const Mc = preload("res://addons/mnemonic/ipc/mnemonic_constants.gd")
 
 
 static func parse_output_error(data: Array) -> Dictionary:

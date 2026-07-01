@@ -16,7 +16,7 @@ When a git repository is detected in your project, Core polls for changes during
 | `git_commit` | HEAD commit hash |
 | `commit_subject` | First line of the commit message |
 
-These fields power filtering in the Hook dock and segment log.
+These fields power filtering in the Mnemonic dock and segment log.
 
 ## Git heuristics
 
@@ -32,7 +32,7 @@ The **commit after playtest** pattern is especially valuable for devlog reconstr
 
 ## Filtering by git context
 
-In the Hook dock:
+In the Mnemonic dock:
 
 - **Filter clips…** on the clips list supports branch and tag filters
 - **Segment log…** supports search by branch, score, and outcome

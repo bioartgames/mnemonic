@@ -1,7 +1,7 @@
 class_name HookGitAheadCount
 extends RefCounted
 
-const GitRunnerGd = preload("res://addons/mnemonic_hook/git/git_runner.gd")
+const GitRunnerGd = preload("res://addons/mnemonic/git/git_runner.gd")
 
 
 static func get_ahead_count() -> int:

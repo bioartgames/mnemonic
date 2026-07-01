@@ -2,7 +2,7 @@ class_name HookFlagWriter
 extends RefCounted
 
 const FLAG_JSON_BODY := "{}"
-const HookFileMutexGd = preload("res://addons/mnemonic_hook/ipc/hook_file_mutex.gd")
+const HookFileMutexGd = preload("res://addons/mnemonic/ipc/hook_file_mutex.gd")
 
 
 static func write_flag_current(paths: MnemonicDataRootPaths) -> bool:
