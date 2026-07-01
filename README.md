@@ -1,6 +1,6 @@
 # Mnemonic
 
-Godot editor addon that captures development episodes — screen, audio, and editor context — with bundled Mnemonic Core (no build tools required).
+A Godot addon that automatically captures and organizes video, audio, and editor context throughout development for devlogs.
 
 ## Install
 
