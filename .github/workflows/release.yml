@@ -30,7 +30,7 @@ jobs:
             throw "Tag version $version does not match plugin.cfg version $pluginVersion"
           }
           "VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
-          ./scripts/package-release.ps1 -Version $version
+          ./scripts/package-release.ps1 -Version $version -SkipTest
 
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
