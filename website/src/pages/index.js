@@ -39,8 +39,7 @@ const pillars = [
 ];
 
 function HomeHero() {
-  const heroGif = useBaseUrl('/img/hero-dock.gif');
-  const heroPoster = useBaseUrl('/img/hero-dock.webp');
+  const heroLogo = useBaseUrl('/img/logo.svg');
 
   return (
     <header className={clsx('hero', styles.heroBanner)}>
@@ -56,18 +55,11 @@ function HomeHero() {
             </p>
             <p className={styles.heroPlatform}>Godot 4.6+ on Windows.</p>
           </div>
-          <picture className={styles.heroPicture}>
-            <source
-              srcSet={heroGif}
-              type="image/gif"
-              media="(prefers-reduced-motion: no-preference)"
-            />
-            <img
-              src={heroPoster}
-              alt="Mnemonic dock in Godot during recording, showing LIVE timer and preserved clips with git commit subjects"
-              className={styles.heroArt}
-            />
-          </picture>
+          <img
+            src={heroLogo}
+            alt="Mnemonic logo"
+            className={styles.heroArt}
+          />
         </div>
         <div className={styles.pillarsGrid}>
           {pillars.map((item) => (

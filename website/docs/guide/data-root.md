@@ -13,21 +13,27 @@ This path is **not** Godot's `user://` directory. Mnemonic and Core agree on Dat
 ```
 Mnemonic/
 ├── settings.json              # Capture and heuristic settings
-├── status.json                # Core heartbeat (recording state, live preview)
+├── scratch/                   # Live / discarded segment buffers (mn_*_segment_*.mp4)
 ├── clips/
-│   ├── clips_index.json       # Index of preserved clips
-│   └── segment_NNNNN/
+│   └── mn_<id>_segment_NNNNN/ # Preserved clip folder (id from capture prefix + index)
 │       ├── video.mp4
 │       ├── thumb.jpg
-│       └── clip.json          # Metadata for this clip
-├── scratch/                   # Live / discarded segment buffers
+│       └── clip.json
 ├── events/
 │   └── session_events.jsonl   # Mnemonic → Core editor events
-├── control/
-│   ├── segment_history.jsonl  # Every segment close (kept + discarded)
-│   ├── flag_current.json      # Manual preserve command (ephemeral)
-│   └── exit_core.json         # Graceful shutdown command (ephemeral)
-└── ffmpeg/                    # Bundled FFmpeg binaries
+├── logs/                      # Core log output
+└── control/
+    ├── status.json            # Core heartbeat (recording state, live preview)
+    ├── segment_history.jsonl  # Every segment close (kept + discarded)
+    ├── editor_scene.json      # Latest editor scene snapshot for heuristics
+    ├── clips_index.json       # Index of preserved clips for dock listing
+    ├── suggested_groups.json  # Suggested clip groupings
+    └── commands/              # Ephemeral command files (consumed by Core)
+        ├── flag_current.json
+        ├── pause_capture.json
+        ├── resume_capture.json
+        ├── exit_core.json
+        └── rebuild_clips_index.json
 ```
 
 ## Key files
@@ -38,7 +44,7 @@ Written by Mnemonic **Capture…** panel and read by Core. Includes segment leng
 
 ### status.json
 
-Core writes this on each poll cycle. Mnemonic reads it for dock status, LIVE row preview, and error display.
+Core writes `control/status.json` on each poll cycle. Mnemonic reads it for dock status, LIVE row preview, and error display.
 
 ### session_events.jsonl
 
@@ -58,7 +64,7 @@ One JSON object per line for every segment close:
 
 ### clips_index.json
 
-Index of all preserved clips for fast Mnemonic dock listing. Version 1 schema.
+`control/clips_index.json` is the index of all preserved clips for fast Mnemonic dock listing. Version 1 schema.
 
 ### clip.json
 
@@ -66,12 +72,15 @@ Per-clip metadata. See [Development episodes](../concepts/development-episodes.m
 
 ## Command files
 
-Mnemonic writes ephemeral command files in `control/`:
+Mnemonic writes ephemeral command files in `control/commands/`:
 
 | File | Purpose |
 |------|---------|
 | `flag_current.json` | Request manual preserve of live segment |
+| `pause_capture.json` | Request capture pause |
+| `resume_capture.json` | Request capture resume |
 | `exit_core.json` | Request graceful Core shutdown |
+| `rebuild_clips_index.json` | Request clips index rebuild |
 
 Core consumes and deletes these within seconds.
 
