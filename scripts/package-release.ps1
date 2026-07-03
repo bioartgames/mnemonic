@@ -43,7 +43,7 @@ if ([string]::IsNullOrWhiteSpace($OutputZip)) {
 
 if (-not $SkipTest) {
     Write-Host "Running dotnet test..."
-    dotnet test $Solution -c $Configuration --no-restore:$false
+    dotnet test $Solution -c $Configuration
     if ($LASTEXITCODE -ne 0) {
         throw "dotnet test failed with exit code $LASTEXITCODE"
     }
