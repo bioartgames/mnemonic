@@ -1,0 +1,9 @@
+bin/
+obj/
+dist/
+.vs/
+*.user
+*.suo
+
+third_party/ffmpeg/win-x64/bin/
+!third_party/ffmpeg/win-x64/.gitkeep

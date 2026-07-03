@@ -1,0 +1,16 @@
+# Mnemonic Core (.NET)
+mnemonic-core/bin/
+mnemonic-core/obj/
+mnemonic-core/dist/
+mnemonic-core/third_party/ffmpeg/win-x64/bin/
+
+# Bundled Core executable (build artifact, not source)
+addons/mnemonic/core/*
+!addons/mnemonic/core/.gdignore
+
+# Release packaging output
+dist/
+
+# OS
+.DS_Store
+Thumbs.db

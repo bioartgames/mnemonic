@@ -22,7 +22,7 @@ https://bioartgames.github.io/mnemonic/
 
 ## Bundled Core
 
-Release zips include a self-contained `Mnemonic.Windows.exe` and FFmpeg under `addons/mnemonic/core/`. Core is not built from this repository.
+Release zips include a self-contained `Mnemonic.Windows.exe` and FFmpeg under `addons/mnemonic/core/`. Core source lives in [`mnemonic-core/`](mnemonic-core/). Contributors: see [`DEV.md`](DEV.md).
 
 ## License
 

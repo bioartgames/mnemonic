@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>assets\mnemonic.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Mnemonic.Windows.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mnemonic.Core\Mnemonic.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\mnemonic.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="..\..\third_party\ffmpeg\win-x64\**\*"
+             Condition="Exists('..\..\third_party\ffmpeg\win-x64\bin\ffmpeg.exe')">
+      <Link>ffmpeg\%(RecursiveDir)%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+  <Target Name="EnsureBundledFfmpeg" BeforeTargets="Build">
+    <Error Condition="!Exists('..\..\third_party\ffmpeg\win-x64\bin\ffmpeg.exe')"
+           Text="Bundled FFmpeg missing. Run: powershell -File scripts/fetch-ffmpeg.ps1" />
+  </Target>
+</Project>
