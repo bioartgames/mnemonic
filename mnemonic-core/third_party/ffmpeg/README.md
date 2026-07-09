@@ -16,8 +16,8 @@ This populates `win-x64/bin/` (gitignored). The Windows project copies `bin/` to
 
 ## Pinned release
 
-- Tag: [autobuild-2026-06-09-15-17](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-06-09-15-17)
-- Archive: `ffmpeg-N-124881-g6028720d70-win64-gpl-shared.zip`
+- Tag: [autobuild-2026-07-08-13-30](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-07-08-13-30)
+- Archive: `ffmpeg-N-125505-gc57660fb18-win64-gpl-shared.zip`
 
 ## Verify after fetch
 

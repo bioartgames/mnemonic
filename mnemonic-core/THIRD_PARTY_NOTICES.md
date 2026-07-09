@@ -6,7 +6,7 @@ Mnemonic Core can bundle FFmpeg binaries for Windows screen/audio capture.
 
 - **Project:** [FFmpeg](https://ffmpeg.org/)
 - **Legal:** https://ffmpeg.org/legal.html
-- **Build source:** [BtbN FFmpeg-Builds](https://github.com/BtbN/FFmpeg-Builds) — `win64-gpl-shared`, release `autobuild-2026-06-09-15-17`
+- **Build source:** [BtbN FFmpeg-Builds](https://github.com/BtbN/FFmpeg-Builds) — `win64-gpl-shared`, release `autobuild-2026-07-08-13-30`
 - **Version:** N-124496 (May 2026 autobuild)
 - **License text:** `third_party/ffmpeg/LICENSE-FFMPEG.txt` (after running `scripts/fetch-ffmpeg.ps1`)
 

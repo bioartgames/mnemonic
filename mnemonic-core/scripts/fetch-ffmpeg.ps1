@@ -1,11 +1,11 @@
 #Requires -Version 5.1
 $ErrorActionPreference = "Stop"
 
-$ReleaseTag = "autobuild-2026-06-09-15-17"
-$ZipName = "ffmpeg-N-124881-g6028720d70-win64-gpl-shared.zip"
+$ReleaseTag = "autobuild-2026-07-08-13-30"
+$ZipName = "ffmpeg-N-125505-gc57660fb18-win64-gpl-shared.zip"
 $ZipUrl = "https://github.com/BtbN/FFmpeg-Builds/releases/download/$ReleaseTag/$ZipName"
 # gpl-shared ships ffmpeg.exe plus required DLLs in bin/ (win64-gpl bin is exe-only here)
-$ExpectedSha256 = "BE113959FDA7BAF395D948F098A65A716EB93BC2E5E002DBD313728012309DB5"
+$ExpectedSha256 = "2F93D54008EA10F6DACAD73CBE8EC9041E9B1BD3A85972FAFFB58F8D5E35C90A"
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RepoRoot = Split-Path -Parent $ScriptDir
